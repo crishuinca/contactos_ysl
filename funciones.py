@@ -11,8 +11,25 @@ def opcion_1():
     contactos.append(contacto)
     print("CONTACTO AÑADIO!")
 def opcion_2():
-    pass
+    if len(contactos) == 0:
+        print("No existen contactos, meta alguno po loko")
+    else:
+        print("LISTA DE CONTACTOS")
+        for c in contactos:
+            print(f"NOMBRE : {c['nombre']}")
+            print(f"TELEFONO : {c['telefono']}")
+            print(f"CORREO : {c['correo']}")
+            
 def opcion_3():
-    pass
+    if len(contactos) == 0:
+        print("No existen contactos, meta alguno po loko")
+    else:
+        nombre_archivo= input("Ingrese nombre del archivo : ")
+        import csv
+        with open(nombre_archivo+".csv","w", newline="") as archivo:
+            escritor = csv.DictWriter(archivo,["nombre", "telefono", "correo"])
+            escritor.writeheader()
+            escritor.writerows(contactos)
+            print("DEA ARCHIVO FUA CRIADO!!")
 def opcion_4():
     pass

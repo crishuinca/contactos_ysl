@@ -11,10 +11,10 @@ while True:
     opc = int(input("Ingrese opción"))
 
     if opc == 1:
-        pass
+        opcion_1()
     elif opc == 2:
-        pass
+        opcion_2()
     elif opc == 3:
-        pass
+        opcion_3()
     else:
-        pass
+        opcion_4()
