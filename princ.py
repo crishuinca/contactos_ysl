@@ -8,7 +8,7 @@ while True:
           3. Guardar archivo CSV
           4. Salir""")
 
-    opc = int(input("Ingrese opción"))
+    opc = validar_opcion([1,2,3,4])
 
     if opc == 1:
         opcion_1()
